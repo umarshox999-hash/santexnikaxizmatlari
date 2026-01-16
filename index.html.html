@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santexnika Xizmati</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background: url('pexels-2157750954-34938441.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/* Hero section */
+.hero {
+  width: 90%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 30px;
+}
+
+/* Animatsion sarlavha */
+.animated-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #003366;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  margin-bottom: 20px;
+  animation: slidePulse 4s ease-in-out infinite;
+}
+@keyframes slidePulse {
+  0% { transform: translateX(-15px) scale(1); }
+  25% { transform: translateX(15px) scale(1.05); }
+  50% { transform: translateX(-15px) scale(1.1); }
+  75% { transform: translateX(15px) scale(1.05); }
+  100% { transform: translateX(-15px) scale(1); }
+}
+
+/* Tugmalar wrapper */
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
+}
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.call-btn { background-color: #4CAF50; }
+.telegram-btn { background-color: #0088cc; }
+
+/* Matn bloklari */
+.description, .services {
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 15px;
+  max-width: 90%;
+  margin: 15px auto;
+  padding: 15px;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: left;
+  line-height: 1.6;
+}
+.description h3, .services h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.description p, .services li { font-size: 14px; }
+.services ul { list-style: none; padding-left: 0; }
+.services li { margin: 6px 0; display: flex; align-items: center; gap: 6px; }
+
+/* Gallery section */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.gallery img {
+  width: calc(50% - 10px);
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 0.8s forwards;
+}
+.gallery img:nth-child(1){ animation-delay: 0.2s; }
+.gallery img:nth-child(2){ animation-delay: 0.4s; }
+.gallery img:nth-child(3){ animation-delay: 0.6s; }
+.gallery img:nth-child(4){ animation-delay: 0.8s; }
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobil optimizatsiya */
+@media (max-width: 480px) {
+  .animated-title { font-size: 20px; }
+  .btn { font-size: 14px; padding: 10px 16px; }
+  .description h3, .services h3 { font-size: 16px; }
+  .description p, .services li { font-size: 13px; }
+  .gallery img { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero section -->
+<div class="hero">
+  <div class="animated-title">TOSHKENT SHAXRI BO'YLAB SANTEXNIKA XIZMATI</div>
+  <div class="button-wrapper">
+    <a href="tel:+998908700770" class="btn call-btn">Qo'ng'iroq qilish</a>
+    <a href="https://t.me/santexnik0770" target="_blank" class="btn telegram-btn">Telegram kanal</a>
+  </div>
+</div>
+    
+<!-- Matn bloki -->
+<div class="description">
+  <h3>🔧 Professional santexnika xizmatlari – tez, sifatli va ishonchli</h3>
+  <p>
+    Biz uy, ofis va tijorat obyektlari uchun barcha turdagi santexnika ishlarini professional darajada amalga oshiramiz. Muammo kichik yoki katta bo‘lishidan qat’i nazar — tezkor yetib boramiz va sifatli yechim beramiz.
+  </p>
+</div>
+
+<!-- Xizmatlar bloki -->
+<div class="services">
+  <h3>🛠 Bizning xizmatlarimiz:</h3>
+  <ul>
+    <li>🔹 Ariston o'rnatish</li>
+    <li>🔹 Dxuvkonter kotyol</li>
+    <li>🔹 Boyler o'rnatish</li>
+    <li>🔹 0 dan montaj</li>
+    <li>🔹 Teplo pol qilish</li>
+    <li>🚿 Suv quvurlari o‘rnatish va ta’mirlash</li>
+    <li>🚽 Unitaz, rakovina, vanna va dush kabinalarini o‘rnatish</li>
+    <li>🔥 Isitish tizimlari (radiator, qozon)</li>
+    <li>🚰 Oqishlarni aniqlash va bartaraf etish</li>
+    <li>🧯 Kanalizatsiya tiqilib qolishini ochish</li>
+    <li>🏠 Yangi uylar uchun to‘liq santexnika ishlari</li>
+  </ul>
+</div>
+
+</body>
+</html>
